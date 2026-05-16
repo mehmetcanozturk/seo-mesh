@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="katman_2" data-name="katman 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 745.64 745.64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f6f6f6;
+      }
+
+      .cls-2 {
+        fill: url(#Adsız_degrade_153);
+        stroke: url(#Adsız_degrade_161);
+        stroke-miterlimit: 10;
+        stroke-width: 5.59px;
+      }
+    </style>
+    <linearGradient id="Adsız_degrade_153" data-name="Adsız degrade 153" x1="-46.56" y1="-99.52" x2="603.21" y2="632.3" gradientUnits="userSpaceOnUse">
+      <stop offset=".16" stop-color="#ef7b5a"/>
+      <stop offset=".49" stop-color="#e83b33"/>
+      <stop offset=".8" stop-color="#e30613"/>
+      <stop offset="1" stop-color="#cb181a"/>
+    </linearGradient>
+    <linearGradient id="Adsız_degrade_161" data-name="Adsız degrade 161" x1="0" y1="372.82" x2="745.64" y2="372.82" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#cb181a"/>
+      <stop offset=".5" stop-color="#e30613"/>
+      <stop offset="1" stop-color="#ef7b5a"/>
+    </linearGradient>
+  </defs>
+  <g id="katman_1" data-name="katman 1">
+    <g>
+      <rect class="cls-2" x="2.79" y="2.79" width="740.05" height="740.05" rx="117.37" ry="117.37"/>
+      <path class="cls-1" d="M656.29,120.84h0c0-17.4-15.86-31.5-35.44-31.5H168.87c-43.92,0-79.52,31.65-79.52,70.69v141.4c0,56.82,46.06,102.87,102.87,102.87h357.76c19.57,0,35.44,14.1,35.44,31.5h0c0,17.4-15.86,31.5-35.44,31.5h-72.82c-21.36,0-42.81-5.37-60.22-17.75-13.78-9.8-31.76-15.12-51.19-13.44-30.48,2.63-59.96,28.41-63.35,55.47-4.76,38.02,28.6,70.21,70.41,70.21,16.3,0,31.28-4.9,43.24-13.13,17.25-11.87,37.62-18.37,58.57-18.37h75.37c19.57,0,35.44,14.1,35.44,31.5h0c0,17.4-15.86,31.5-35.44,31.5H124.78c-19.57,0-35.44,14.1-35.44,31.5h0c0,17.4,15.86,31.5,35.44,31.5h451.98c43.92,0,79.52-31.65,79.52-70.69v-141.4c0-56.82-46.06-102.87-102.87-102.87H195.65c-19.57,0-35.44-14.1-35.44-31.5h0c0-17.4,15.86-31.5,35.44-31.5h72.78c21.38,0,42.84,5.37,60.27,17.75,13.79,9.8,31.79,15.12,51.22,13.43,30.48-2.64,59.93-28.44,63.3-55.49,4.73-38.01-28.62-70.19-70.42-70.19-16.3,0-31.28,4.9-43.24,13.13-17.25,11.87-37.62,18.37-58.57,18.37h-75.37c-19.57,0-35.44-14.1-35.44-31.5h0c0-17.4,15.86-31.5,35.44-31.5h425.2c19.59,0,35.45-14.11,35.45-31.5Z"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,167 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #e8e8e8;
+  line-height: 1.6;
+}
+
+.story-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.story-left {
+  padding: 2rem;
+  border-right: 1px solid #1e1e1e;
+  overflow: auto;
+}
+
+.story-right {
+  padding: 2rem;
+  background: #0a0a0a;
+  overflow: auto;
+}
+
+.story-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.story-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.35rem;
+}
+
+.story-desc {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Demo UI */
+.product-card, .article-card, .faq-card, .local-card, .software-card, .website-card, .breadcrumb-card {
+  background: #161616;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.product-card h2, .article-card h2, .faq-card h2, .local-card h2, .software-card h2, .website-card h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p, .article-card p, .faq-card p, .local-card p, .software-card p, .website-card p {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.price { font-size: 1.8rem; font-weight: 800; color: #22c55e; }
+.price-currency { font-size: 1rem; color: #666; margin-left: 0.25rem; }
+.badge { display: inline-block; background: #1a2e1a; color: #22c55e; border: 1px solid #22c55e44; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-top: 0.5rem; }
+.badge.blue { background: #1a1e2e; color: #60a5fa; border-color: #60a5fa44; }
+.badge.purple { background: #1e1a2e; color: #a78bfa; border-color: #a78bfa44; }
+
+.stars { color: #f59e0b; font-size: 1.1rem; }
+.meta { font-size: 0.8rem; color: #555; }
+
+.faq-item { border-bottom: 1px solid #1e1e1e; padding: 0.75rem 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-item h4 { font-size: 0.95rem; color: #ccc; margin-bottom: 0.35rem; }
+.faq-item p { font-size: 0.85rem; color: #666; }
+
+.breadcrumbs { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.breadcrumbs span { color: #444; }
+.breadcrumbs a { color: #60a5fa; font-size: 0.85rem; text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; }
+
+/* JSON-LD panel */
+.jsonld-panel {
+  position: sticky;
+  top: 0;
+}
+
+.jsonld-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.jsonld-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #444;
+}
+
+.jsonld-type-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: #1a2e1a;
+  color: #22c55e;
+  border: 1px solid #22c55e33;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.jsonld-code {
+  background: #111;
+  border: 1px solid #1e1e1e;
+  border-radius: 8px;
+  padding: 1.25rem;
+  font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: #ccc;
+  overflow: auto;
+  white-space: pre;
+}
+
+.jsonld-code .key { color: #60a5fa; }
+.jsonld-code .str { color: #86efac; }
+.jsonld-code .num { color: #f59e0b; }
+.jsonld-code .bool { color: #f472b6; }
+.jsonld-code .null { color: #888; }
+
+.source-code {
+  margin-top: 1.5rem;
+  background: #111;
+  border: 1px solid #1e1e1e;
+  border-radius: 8px;
+  padding: 1.25rem;
+  font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+  font-size: 0.76rem;
+  line-height: 1.7;
+  color: #999;
+  overflow: auto;
+  white-space: pre;
+}
+
+.source-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.tag { color: #60a5fa; }
+.attr { color: #86efac; }
+.val { color: #fbbf24; }
+.comment { color: #444; font-style: italic; }
