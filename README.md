@@ -7,8 +7,8 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@seo-mesh/next"><img src="https://img.shields.io/npm/v/@seo-mesh/next?label=%40seo-mesh%2Fnext&color=60a5fa" alt="npm" /></a>
-  <a href="https://www.npmjs.com/package/@seo-mesh/react"><img src="https://img.shields.io/npm/v/@seo-mesh/react?label=%40seo-mesh%2Freact&color=818cf8" alt="npm" /></a>
+  <a href="https://www.npmjs.com/package/@seomesh/next"><img src="https://img.shields.io/npm/v/@seomesh/next?label=%40seo-mesh%2Fnext&color=60a5fa" alt="npm" /></a>
+  <a href="https://www.npmjs.com/package/@seomesh/react"><img src="https://img.shields.io/npm/v/@seomesh/react?label=%40seo-mesh%2Freact&color=818cf8" alt="npm" /></a>
   <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT" />
   <img src="https://img.shields.io/badge/RSC-compatible-brightgreen" alt="RSC" />
 </p>
@@ -19,25 +19,25 @@
 
 | Package | Description |
 |---------|-------------|
-| [`@seo-mesh/next`](./packages/next) | Next.js App Router — all components + sitemap, robots.txt, llms.txt, SEO audit |
-| [`@seo-mesh/react`](./packages/react) | React RSC components — JSON-LD, OpenGraph, Canonical, HreflangAlternate |
-| [`@seo-mesh/core`](./packages/core) | Framework-agnostic JSX traversal and JSON-LD builder |
+| [`@seomesh/next`](./packages/next) | Next.js App Router — all components + sitemap, robots.txt, llms.txt, SEO audit |
+| [`@seomesh/react`](./packages/react) | React RSC components — JSON-LD, OpenGraph, Canonical, HreflangAlternate |
+| [`@seomesh/core`](./packages/core) | Framework-agnostic JSX traversal and JSON-LD builder |
 
 ## Installation
 
 ```bash
 # For Next.js projects (recommended)
-npm install @seo-mesh/next
+npm install @seomesh/next
 
 # React only
-npm install @seo-mesh/react
+npm install @seomesh/react
 ```
 
 ## Quick Start
 
 ```tsx
 // app/product/page.tsx
-import { Product, Offer, OpenGraph, Canonical } from '@seo-mesh/next';
+import { Product, Offer, OpenGraph, Canonical } from '@seomesh/next';
 
 export default function Page() {
   return (
@@ -63,7 +63,7 @@ export default function Page() {
 ### JSON-LD Components (40+ schema types)
 
 ```tsx
-import { Article, Person, FAQPage, Question, Answer } from '@seo-mesh/next';
+import { Article, Person, FAQPage, Question, Answer } from '@seomesh/next';
 
 <Article headline="My Post" datePublished="2026-05-15">
   <Person prop="author" name="Mehmet Can Öztürk" />
@@ -79,7 +79,7 @@ import { Article, Person, FAQPage, Question, Answer } from '@seo-mesh/next';
 ### OpenGraph & Meta Tags
 
 ```tsx
-import { OpenGraph, Canonical, HreflangAlternate } from '@seo-mesh/next';
+import { OpenGraph, Canonical, HreflangAlternate } from '@seomesh/next';
 
 <OpenGraph title="Page Title" description="..." image="..." twitterCard="summary_large_image" />
 <Canonical href="https://mysite.com/page" />
@@ -93,7 +93,7 @@ import { OpenGraph, Canonical, HreflangAlternate } from '@seo-mesh/next';
 
 ```ts
 // app/sitemap.xml/route.ts
-import { generateSitemap } from '@seo-mesh/next';
+import { generateSitemap } from '@seomesh/next';
 
 export function GET() {
   return new Response(generateSitemap({
@@ -112,7 +112,7 @@ export function GET() {
 }
 
 // app/robots.txt/route.ts
-import { generateRobotsTxt } from '@seo-mesh/next';
+import { generateRobotsTxt } from '@seomesh/next';
 
 export function GET() {
   return new Response(generateRobotsTxt({
@@ -128,7 +128,7 @@ export function GET() {
 ### AI Features
 
 ```tsx
-import { AiBotPolicy, Speakable } from '@seo-mesh/next';
+import { AiBotPolicy, Speakable } from '@seomesh/next';
 
 // Block AI training crawlers
 <AiBotPolicy deny={['GPTBot', 'CCBot', 'Google-Extended']} noAiImages />
@@ -141,7 +141,7 @@ import { AiBotPolicy, Speakable } from '@seo-mesh/next';
 
 ```ts
 // app/llms.txt/route.ts
-import { generateLlmsTxt } from '@seo-mesh/next';
+import { generateLlmsTxt } from '@seomesh/next';
 
 export function GET() {
   return new Response(generateLlmsTxt({
@@ -155,7 +155,7 @@ export function GET() {
 ### SEO Audit
 
 ```ts
-import { auditPage } from '@seo-mesh/next';
+import { auditPage } from '@seomesh/next';
 
 const { score, passed, issues } = auditPage({
   title: 'Page Title (30-60 chars)',
@@ -172,7 +172,7 @@ const { score, passed, issues } = auditPage({
 ### @graph Support
 
 ```tsx
-import { SchemaGraph, WebSite, Organization } from '@seo-mesh/next';
+import { SchemaGraph, WebSite, Organization } from '@seomesh/next';
 
 <SchemaGraph>
   <WebSite name="seo-mesh" url="https://seo-mesh.dev" />

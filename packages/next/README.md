@@ -1,15 +1,15 @@
-ï»¿<p align="center">
+<p align="center">
   <img src="https://raw.githubusercontent.com/mehmetcanozturk/seo-mesh/refs/heads/master/assets/seomesh-logo.png" alt="seo-mesh" width="240" />
 </p>
 
-<h1 align="center">@seo-mesh/next</h1>
+<h1 align="center">@seomesh/next</h1>
 
 <p align="center">
-  Next.js App Router integration for seo-mesh â€” JSON-LD components, sitemap, robots.txt, llms.txt, OpenGraph, and SEO audit
+  Next.js App Router integration for seo-mesh — JSON-LD components, sitemap, robots.txt, llms.txt, OpenGraph, and SEO audit
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@seo-mesh/next"><img src="https://img.shields.io/npm/v/@seo-mesh/next?color=60a5fa" /></a>
+  <a href="https://www.npmjs.com/package/@seomesh/next"><img src="https://img.shields.io/npm/v/@seomesh/next?color=60a5fa" /></a>
   <img src="https://img.shields.io/badge/Next.js-14%2B-black" />
   <img src="https://img.shields.io/badge/RSC-compatible-brightgreen" />
   <img src="https://img.shields.io/badge/license-MIT-green" />
@@ -20,43 +20,43 @@
 ## Kurulum
 
 ```bash
-npm install @seo-mesh/next
+npm install @seomesh/next
 # veya
-pnpm add @seo-mesh/next
+pnpm add @seomesh/next
 ```
 
-## Ne Ä°Ã§erir?
+## Ne Içerir?
 
-`@seo-mesh/next`, `@seo-mesh/react`'in tÃ¼m bileÅŸenlerini yeniden export eder ve Next.js'e Ã¶zel araÃ§lar ekler:
+`@seomesh/next`, `@seomesh/react`'in tüm bilesenlerini yeniden export eder ve Next.js'e özel araçlar ekler:
 
-### BileÅŸenler (React'tan yeniden export)
+### Bilesenler (React'tan yeniden export)
 
-| BileÅŸen | AÃ§Ä±klama |
+| Bilesen | Açiklama |
 |---------|----------|
-| `<Product>`, `<Article>`, `<FAQPage>` ... | 40+ schema.org JSON-LD bileÅŸeni |
+| `<Product>`, `<Article>`, `<FAQPage>` ... | 40+ schema.org JSON-LD bileseni |
 | `<OpenGraph>` | og:* ve twitter:* meta tag'leri |
 | `<Canonical>` | `<link rel="canonical">` |
-| `<HreflangAlternate>` | Ã‡ok dilli hreflang tag'leri |
+| `<HreflangAlternate>` | Çok dilli hreflang tag'leri |
 | `<AiBotPolicy>` | GPTBot, CCBot, Google-Extended engelleme |
-| `<Speakable>` | AI Ã¶zetleme iÅŸaretÃ§isi |
-| `<SchemaGraph>` | Ã‡oklu ÅŸema â†’ @graph merge |
+| `<Speakable>` | AI özetleme isaretçisi |
+| `<SchemaGraph>` | Çoklu sema ? @graph merge |
 
 ### Fonksiyonlar
 
-| Fonksiyon | AÃ§Ä±klama |
+| Fonksiyon | Açiklama |
 |-----------|----------|
 | `generateSitemap()` | XML sitemap (xhtml:link alternates dahil) |
-| `generateRobotsTxt()` | robots.txt Ã¼retici |
-| `generateLlmsTxt()` | LLM crawler standart dosyasÄ± |
-| `auditPage()` | 0â€“100 SEO skoru |
+| `generateRobotsTxt()` | robots.txt üretici |
+| `generateLlmsTxt()` | LLM crawler standart dosyasi |
+| `auditPage()` | 0–100 SEO skoru |
 
-## KullanÄ±m
+## Kullanim
 
 ### JSON-LD
 
 ```tsx
 // app/urun/page.tsx
-import { Product, Offer } from '@seo-mesh/next';
+import { Product, Offer } from '@seomesh/next';
 
 export default function Page() {
   return (
@@ -71,7 +71,7 @@ export default function Page() {
 
 ```ts
 // app/sitemap.xml/route.ts
-import { generateSitemap } from '@seo-mesh/next';
+import { generateSitemap } from '@seomesh/next';
 
 export function GET() {
   return new Response(generateSitemap({
@@ -95,7 +95,7 @@ export function GET() {
 
 ```ts
 // app/robots.txt/route.ts
-import { generateRobotsTxt } from '@seo-mesh/next';
+import { generateRobotsTxt } from '@seomesh/next';
 
 export function GET() {
   return new Response(generateRobotsTxt({
@@ -112,7 +112,7 @@ export function GET() {
 
 ```ts
 // app/llms.txt/route.ts
-import { generateLlmsTxt } from '@seo-mesh/next';
+import { generateLlmsTxt } from '@seomesh/next';
 
 export function GET() {
   return new Response(generateLlmsTxt({
@@ -128,11 +128,11 @@ export function GET() {
 ### SEO Audit
 
 ```ts
-import { auditPage } from '@seo-mesh/next';
+import { auditPage } from '@seomesh/next';
 
 const { score, passed, issues } = auditPage({
-  title: 'Sayfa BaÅŸlÄ±ÄŸÄ± (30â€“60 karakter)',
-  description: 'Meta aÃ§Ä±klama (120â€“160 karakter)...',
+  title: 'Sayfa Basligi (30–60 karakter)',
+  description: 'Meta açiklama (120–160 karakter)...',
   canonical: 'https://mysite.com/sayfa',
   og: { title: '...', description: '...', image: '...', imageAlt: '...' },
   schema: { '@type': 'Article', headline: '...', description: '...' },
@@ -144,4 +144,5 @@ const { score, passed, issues } = auditPage({
 
 ## Lisans
 
-MIT Â© Mehmet Can Ã–ztÃ¼rk
+MIT © Mehmet Can Öztürk
+

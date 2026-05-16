@@ -1,9 +1,9 @@
-ï»¿{
-  "name": "@seo-mesh/next",
+{
+  "name": "@seomesh/next",
   "version": "0.1.0",
-  "description": "Next.js App Router integration â€” sitemap, robots.txt, llms.txt, SEO audit and all seo-mesh components",
+  "description": "Next.js App Router integration — sitemap, robots.txt, llms.txt, SEO audit and all seo-mesh components",
   "license": "MIT",
-  "author": "Mehmet Can Ã–ztÃ¼rk",
+  "author": "Mehmet Can Öztürk",
   "homepage": "https://github.com/mehmetcanozturk/seo-mesh#readme",
   "repository": {
     "type": "git",
@@ -45,8 +45,8 @@
     "clean": "rimraf dist coverage"
   },
   "dependencies": {
-    "@seo-mesh/core": "workspace:*",
-    "@seo-mesh/react": "workspace:*"
+    "@seomesh/core": "workspace:*",
+    "@seomesh/react": "workspace:*"
   },
   "peerDependencies": {
     "next": ">=14.0.0",
@@ -54,8 +54,8 @@
     "react-dom": ">=18.0.0"
   },
   "devDependencies": {
-    "@seo-mesh/core": "workspace:*",
-    "@seo-mesh/react": "workspace:*",
+    "@seomesh/core": "workspace:*",
+    "@seomesh/react": "workspace:*",
     "@types/react": "^19.0.0",
     "next": "^15.0.0",
     "react": "^19.0.0",
@@ -66,3 +66,5 @@
     "vitest": "^2.1.0"
   }
 }
+
+
