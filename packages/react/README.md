@@ -5,7 +5,7 @@
 <h1 align="center">@seomesh/react</h1>
 
 <p align="center">
-  React Server Components — JSON-LD structured data, OpenGraph, Canonical, HreflangAlternate
+  React Server Components â€” JSON-LD structured data, OpenGraph, Canonical, HreflangAlternate
 </p>
 
 <p align="center">
@@ -17,23 +17,23 @@
 
 ---
 
-> **Next.js kullaniyorsaniz:** [`@seomesh/next`](https://www.npmjs.com/package/@seomesh/next) kullanin — tüm bu bilesenleri içerir, ayrica sitemap/robots.txt/llms.txt araçlari ekler.
+> **Using Next.js?** Use [`@seomesh/next`](https://www.npmjs.com/package/@seomesh/next) â€” it includes all these components plus sitemap, robots.txt, and llms.txt generators.
 
-## Kurulum
+## Installation
 
 ```bash
 npm install @seomesh/react
 ```
 
-## Bilesenler
+## Components
 
-### JSON-LD (40+ schema.org tipi)
+### JSON-LD (40+ schema.org types)
 
 ```tsx
 import { Product, Offer, AggregateRating } from '@seomesh/react';
 
-<Product name="Hosting Paketi" description="NVMe SSD, LiteSpeed.">
-  <Offer prop="offers" price={99.9} priceCurrency="TRY" availability="https://schema.org/InStock" />
+<Product name="Hosting Plan" description="NVMe SSD, LiteSpeed.">
+  <Offer prop="offers" price={9.9} priceCurrency="USD" availability="https://schema.org/InStock" />
   <AggregateRating prop="aggregateRating" ratingValue={4.8} reviewCount={312} />
 </Product>
 ```
@@ -44,10 +44,10 @@ import { Product, Offer, AggregateRating } from '@seomesh/react';
 import { OpenGraph } from '@seomesh/react';
 
 <OpenGraph
-  title="Sayfa Basligi"
-  description="Meta açiklama"
+  title="Page Title"
+  description="Meta description"
   image="https://mysite.com/og.png"
-  imageAlt="OG görseli"
+  imageAlt="OG image"
   type="website"
   twitterCard="summary_large_image"
 />
@@ -58,7 +58,7 @@ import { OpenGraph } from '@seomesh/react';
 ```tsx
 import { Canonical } from '@seomesh/react';
 
-<Canonical href="https://mysite.com/sayfa" />
+<Canonical href="https://mysite.com/page" />
 ```
 
 ### HreflangAlternate
@@ -69,27 +69,27 @@ import { HreflangAlternate } from '@seomesh/react';
 <HreflangAlternate
   includeXDefault
   locales={[
-    { lang: 'tr', href: 'https://mysite.com/tr' },
     { lang: 'en', href: 'https://mysite.com/en' },
+    { lang: 'tr', href: 'https://mysite.com/tr' },
   ]}
 />
 ```
 
-### AI Bot Politikasi
+### AI Bot Policy
 
 ```tsx
 import { AiBotPolicy } from '@seomesh/react';
 
-// Egitim verisi toplayan bot'lari engelle
+// Block AI training crawlers
 <AiBotPolicy deny={['GPTBot', 'CCBot', 'Google-Extended']} noAiImages />
 ```
 
-### Speakable (AI Özetleme)
+### Speakable (AI Summarization)
 
 ```tsx
 import { Article, Speakable } from '@seomesh/react';
 
-<Article headline="Baslik" datePublished="2026-05-15">
+<Article headline="Title" datePublished="2026-05-15">
   <Speakable prop="speakable" cssSelector={['.intro', 'h1']} />
 </Article>
 ```
@@ -105,11 +105,10 @@ import { SchemaGraph, WebSite, Organization } from '@seomesh/react';
 </SchemaGraph>
 ```
 
-## RSC Uyumlulugu
+## RSC Compatible
 
-React Context kullanilmaz. JSX agaci statik olarak gezilir — `'use server'` bilesenlerinde sorunsuz çalisir.
+No React Context used. The JSX tree is traversed statically â€” works seamlessly in `'use server'` components.
 
-## Lisans
+## License
 
-MIT © Mehmet Can Öztürk
-
+MIT Â© Mehmet Can Ã–ztÃ¼rk

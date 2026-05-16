@@ -1,6 +1,6 @@
 {
   "name": "@seomesh/core",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Framework-agnostic JSX tree traversal and JSON-LD builder for seo-mesh",
   "license": "MIT",
   "author": "Mehmet Can Öztürk",

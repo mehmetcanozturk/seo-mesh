@@ -5,7 +5,7 @@
 <h1 align="center">@seomesh/core</h1>
 
 <p align="center">
-  Framework-agnostic JSX tree traversal and JSON-LD builder — the engine behind seo-mesh
+  Framework-agnostic JSX tree traversal and JSON-LD builder â€” the engine behind seo-mesh
 </p>
 
 <p align="center">
@@ -15,9 +15,9 @@
 
 ---
 
-> **Uygulama gelistiriyorsaniz** bu paketi dogrudan kullanmayin. [`@seomesh/next`](https://www.npmjs.com/package/@seomesh/next) veya [`@seomesh/react`](https://www.npmjs.com/package/@seomesh/react) tercih edin.
+> **Building an app?** Use [`@seomesh/next`](https://www.npmjs.com/package/@seomesh/next) or [`@seomesh/react`](https://www.npmjs.com/package/@seomesh/react) instead of this package directly.
 
-`@seomesh/core`, JSX element agacini statik olarak gezerek schema.org nesnesi insa eden düsük seviyeli motorudur.
+`@seomesh/core` is the low-level engine that statically traverses JSX element trees to build schema.org objects.
 
 ## API
 
@@ -31,7 +31,6 @@ import {
 } from '@seomesh/core';
 ```
 
-## Lisans
+## License
 
-MIT © Mehmet Can Öztürk
-
+MIT Â© Mehmet Can Ã–ztÃ¼rk

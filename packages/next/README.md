@@ -5,7 +5,7 @@
 <h1 align="center">@seomesh/next</h1>
 
 <p align="center">
-  Next.js App Router integration for seo-mesh — JSON-LD components, sitemap, robots.txt, llms.txt, OpenGraph, and SEO audit
+  Next.js App Router integration â€” JSON-LD components, sitemap, robots.txt, llms.txt, OpenGraph, and SEO audit
 </p>
 
 <p align="center">
@@ -17,51 +17,51 @@
 
 ---
 
-## Kurulum
+## Installation
 
 ```bash
 npm install @seomesh/next
-# veya
+# or
 pnpm add @seomesh/next
 ```
 
-## Ne Içerir?
+## What's Included?
 
-`@seomesh/next`, `@seomesh/react`'in tüm bilesenlerini yeniden export eder ve Next.js'e özel araçlar ekler:
+`@seomesh/next` re-exports all `@seomesh/react` components and adds Next.js-specific utilities:
 
-### Bilesenler (React'tan yeniden export)
+### Components (re-exported from React)
 
-| Bilesen | Açiklama |
-|---------|----------|
-| `<Product>`, `<Article>`, `<FAQPage>` ... | 40+ schema.org JSON-LD bileseni |
-| `<OpenGraph>` | og:* ve twitter:* meta tag'leri |
+| Component | Description |
+|-----------|-------------|
+| `<Product>`, `<Article>`, `<FAQPage>` ... | 40+ schema.org JSON-LD components |
+| `<OpenGraph>` | og:* and twitter:* meta tags |
 | `<Canonical>` | `<link rel="canonical">` |
-| `<HreflangAlternate>` | Çok dilli hreflang tag'leri |
-| `<AiBotPolicy>` | GPTBot, CCBot, Google-Extended engelleme |
-| `<Speakable>` | AI özetleme isaretçisi |
-| `<SchemaGraph>` | Çoklu sema ? @graph merge |
+| `<HreflangAlternate>` | Multilingual hreflang tags |
+| `<AiBotPolicy>` | Block GPTBot, CCBot, Google-Extended |
+| `<Speakable>` | AI summarization marker |
+| `<SchemaGraph>` | Merge multiple schemas into @graph |
 
-### Fonksiyonlar
+### Functions
 
-| Fonksiyon | Açiklama |
-|-----------|----------|
-| `generateSitemap()` | XML sitemap (xhtml:link alternates dahil) |
-| `generateRobotsTxt()` | robots.txt üretici |
-| `generateLlmsTxt()` | LLM crawler standart dosyasi |
-| `auditPage()` | 0–100 SEO skoru |
+| Function | Description |
+|----------|-------------|
+| `generateSitemap()` | XML sitemap with xhtml:link alternates |
+| `generateRobotsTxt()` | robots.txt generator |
+| `generateLlmsTxt()` | LLM crawler standard file |
+| `auditPage()` | SEO score 0-100 |
 
-## Kullanim
+## Usage
 
 ### JSON-LD
 
 ```tsx
-// app/urun/page.tsx
+// app/product/page.tsx
 import { Product, Offer } from '@seomesh/next';
 
 export default function Page() {
   return (
     <Product name="WordPress Hosting" description="NVMe SSD hosting.">
-      <Offer prop="offers" price={99.9} priceCurrency="TRY" availability="https://schema.org/InStock" />
+      <Offer prop="offers" price={9.9} priceCurrency="USD" availability="https://schema.org/InStock" />
     </Product>
   );
 }
@@ -82,8 +82,8 @@ export function GET() {
         changefreq: 'weekly',
         priority: 1.0,
         alternates: [
-          { lang: 'tr', href: 'https://mysite.com/tr' },
           { lang: 'en', href: 'https://mysite.com/en' },
+          { lang: 'tr', href: 'https://mysite.com/tr' },
         ],
       },
     ],
@@ -131,9 +131,9 @@ export function GET() {
 import { auditPage } from '@seomesh/next';
 
 const { score, passed, issues } = auditPage({
-  title: 'Sayfa Basligi (30–60 karakter)',
-  description: 'Meta açiklama (120–160 karakter)...',
-  canonical: 'https://mysite.com/sayfa',
+  title: 'Page Title (30-60 chars)',
+  description: 'Meta description (120-160 chars)...',
+  canonical: 'https://mysite.com/page',
   og: { title: '...', description: '...', image: '...', imageAlt: '...' },
   schema: { '@type': 'Article', headline: '...', description: '...' },
 });
@@ -142,7 +142,6 @@ const { score, passed, issues } = auditPage({
 // issues: [{ rule: 'og-image-alt', message: '...', impact: 'info' }]
 ```
 
-## Lisans
+## License
 
-MIT © Mehmet Can Öztürk
-
+MIT Â© Mehmet Can Ã–ztÃ¼rk

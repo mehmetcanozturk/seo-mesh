@@ -1,6 +1,6 @@
 {
   "name": "@seomesh/next",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Next.js App Router integration � sitemap, robots.txt, llms.txt, SEO audit and all seo-mesh components",
   "license": "MIT",
   "author": "Mehmet Can Öztürk",
