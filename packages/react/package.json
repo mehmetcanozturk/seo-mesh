@@ -1,9 +1,9 @@
 {
   "name": "@seomesh/react",
   "version": "0.1.0",
-  "description": "React components for JSON-LD structured data —  Product, Article, FAQPage and 40+ schema.org types",
+  "description": "React components for JSON-LD structured data ï¿½  Product, Article, FAQPage and 40+ schema.org types",
   "license": "MIT",
-  "author": "Mehmet Can Öztürk",
+  "author": "Mehmet Can Ã–ztÃ¼rk",
   "homepage": "https://github.com/mehmetcanozturk/seo-mesh#readme",
   "repository": {
     "type": "git",
