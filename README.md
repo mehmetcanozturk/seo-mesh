@@ -1,4 +1,4 @@
-﻿<p align="center">
+<p align="center">
   <img src="https://raw.githubusercontent.com/mehmetcanozturk/seo-mesh/refs/heads/master/assets/seomesh-logo.png" alt="seo-mesh" width="280" />
 </p>
 
@@ -15,28 +15,28 @@
 
 ---
 
-## Paketler
+## Packages
 
-| Paket | Açıklama |
-|-------|----------|
-| [`@seo-mesh/next`](./packages/next) | Next.js App Router — tüm bileşenler + sitemap/robots/llms.txt/audit |
-| [`@seo-mesh/react`](./packages/react) | React RSC bileşenleri — JSON-LD, OpenGraph, Canonical, HreflangAlternate |
-| [`@seo-mesh/core`](./packages/core) | Framework-agnostic JSX traversal ve JSON-LD builder |
+| Package | Description |
+|---------|-------------|
+| [`@seo-mesh/next`](./packages/next) | Next.js App Router — all components + sitemap, robots.txt, llms.txt, SEO audit |
+| [`@seo-mesh/react`](./packages/react) | React RSC components — JSON-LD, OpenGraph, Canonical, HreflangAlternate |
+| [`@seo-mesh/core`](./packages/core) | Framework-agnostic JSX traversal and JSON-LD builder |
 
-## Kurulum
+## Installation
 
 ```bash
-# Next.js projeleri için (önerilen)
+# For Next.js projects (recommended)
 npm install @seo-mesh/next
 
-# Sadece React için
+# React only
 npm install @seo-mesh/react
 ```
 
-## Hızlı Başlangıç
+## Quick Start
 
 ```tsx
-// app/urun/page.tsx
+// app/product/page.tsx
 import { Product, Offer, OpenGraph, Canonical } from '@seo-mesh/next';
 
 export default function Page() {
@@ -44,34 +44,34 @@ export default function Page() {
     <>
       <OpenGraph
         title="WordPress Hosting"
-        description="NVMe SSD, LiteSpeed, ücretsiz SSL."
+        description="NVMe SSD, LiteSpeed, free SSL."
         image="https://mysite.com/og/hosting.png"
         type="website"
       />
-      <Canonical href="https://mysite.com/urun" />
+      <Canonical href="https://mysite.com/product" />
 
-      <Product name="WordPress Hosting" description="NVMe SSD hosting çözümü.">
-        <Offer prop="offers" price={99.9} priceCurrency="TRY" availability="https://schema.org/InStock" />
+      <Product name="WordPress Hosting" description="Professional NVMe SSD hosting.">
+        <Offer prop="offers" price={9.9} priceCurrency="USD" availability="https://schema.org/InStock" />
       </Product>
     </>
   );
 }
 ```
 
-## Özellikler
+## Features
 
-### JSON-LD Bileşenleri (40+ şema tipi)
+### JSON-LD Components (40+ schema types)
 
 ```tsx
 import { Article, Person, FAQPage, Question, Answer } from '@seo-mesh/next';
 
-<Article headline="Başlık" datePublished="2026-05-15">
+<Article headline="My Post" datePublished="2026-05-15">
   <Person prop="author" name="Mehmet Can Öztürk" />
 </Article>
 
 <FAQPage>
-  <Question prop="mainEntity" name="seo-mesh RSC ile çalışır mı?">
-    <Answer prop="acceptedAnswer" text="Evet, React Context gerektirmez." />
+  <Question prop="mainEntity" name="Does seo-mesh work with RSC?">
+    <Answer prop="acceptedAnswer" text="Yes, no React Context needed." />
   </Question>
 </FAQPage>
 ```
@@ -81,9 +81,12 @@ import { Article, Person, FAQPage, Question, Answer } from '@seo-mesh/next';
 ```tsx
 import { OpenGraph, Canonical, HreflangAlternate } from '@seo-mesh/next';
 
-<OpenGraph title="Sayfa Başlığı" description="..." image="..." twitterCard="summary_large_image" />
-<Canonical href="https://mysite.com/sayfa" />
-<HreflangAlternate locales={[{ lang: 'tr', href: '...' }, { lang: 'en', href: '...' }]} includeXDefault />
+<OpenGraph title="Page Title" description="..." image="..." twitterCard="summary_large_image" />
+<Canonical href="https://mysite.com/page" />
+<HreflangAlternate
+  locales={[{ lang: 'en', href: '...' }, { lang: 'tr', href: '...' }]}
+  includeXDefault
+/>
 ```
 
 ### Sitemap & Robots.txt
@@ -95,7 +98,15 @@ import { generateSitemap } from '@seo-mesh/next';
 export function GET() {
   return new Response(generateSitemap({
     entries: [
-      { url: 'https://mysite.com', changefreq: 'weekly', priority: 1.0 },
+      {
+        url: 'https://mysite.com',
+        changefreq: 'weekly',
+        priority: 1.0,
+        alternates: [
+          { lang: 'en', href: 'https://mysite.com/en' },
+          { lang: 'tr', href: 'https://mysite.com/tr' },
+        ],
+      },
     ],
   }), { headers: { 'Content-Type': 'application/xml' } });
 }
@@ -107,26 +118,38 @@ export function GET() {
   return new Response(generateRobotsTxt({
     rules: [
       { userAgent: '*', allow: '/' },
-      { userAgent: ['GPTBot', 'CCBot'], disallow: '/' },
+      { userAgent: ['GPTBot', 'CCBot', 'Google-Extended'], disallow: '/' },
     ],
     sitemap: 'https://mysite.com/sitemap.xml',
   }), { headers: { 'Content-Type': 'text/plain' } });
 }
 ```
 
-### AI Özellikleri
+### AI Features
 
 ```tsx
 import { AiBotPolicy, Speakable } from '@seo-mesh/next';
-import { generateLlmsTxt } from '@seo-mesh/next';
 
-// AI crawler kontrolü
+// Block AI training crawlers
 <AiBotPolicy deny={['GPTBot', 'CCBot', 'Google-Extended']} noAiImages />
 
-// AI özetleme işaretçisi
+// Mark content for AI summarization
 <Article headline="...">
   <Speakable prop="speakable" cssSelector={['.intro', 'h1']} />
 </Article>
+```
+
+```ts
+// app/llms.txt/route.ts
+import { generateLlmsTxt } from '@seo-mesh/next';
+
+export function GET() {
+  return new Response(generateLlmsTxt({
+    siteName: 'My Site',
+    tagline: 'What my site does',
+    sections: [{ title: 'Docs', links: [{ label: 'Getting Started', url: '/docs' }] }],
+  }), { headers: { 'Content-Type': 'text/plain' } });
+}
 ```
 
 ### SEO Audit
@@ -134,20 +157,19 @@ import { generateLlmsTxt } from '@seo-mesh/next';
 ```ts
 import { auditPage } from '@seo-mesh/next';
 
-const result = auditPage({
-  title: 'Sayfa Başlığı',
-  description: 'Meta açıklama...',
-  canonical: 'https://mysite.com/sayfa',
-  og: { title: '...', image: '...' },
-  schema: { '@type': 'Article', ... },
+const { score, passed, issues } = auditPage({
+  title: 'Page Title (30-60 chars)',
+  description: 'Meta description (120-160 chars)...',
+  canonical: 'https://mysite.com/page',
+  og: { title: '...', description: '...', image: '...', imageAlt: '...' },
+  schema: { '@type': 'Article', headline: '...', description: '...' },
 });
-
-console.log(result.score);   // 0-100
-console.log(result.issues);  // [{ rule, message, impact }]
-console.log(result.passed);  // ['Title length is optimal', ...]
+// score: 95
+// passed: ['Title length is optimal', 'og:title is set', ...]
+// issues: [{ rule: 'og-image-alt', message: '...', impact: 'info' }]
 ```
 
-### @graph Desteği
+### @graph Support
 
 ```tsx
 import { SchemaGraph, WebSite, Organization } from '@seo-mesh/next';
@@ -156,13 +178,13 @@ import { SchemaGraph, WebSite, Organization } from '@seo-mesh/next';
   <WebSite name="seo-mesh" url="https://seo-mesh.dev" />
   <Organization name="seo-mesh" url="https://seo-mesh.dev" />
 </SchemaGraph>
-// → { "@context": "...", "@graph": [...] }
+// => { "@context": "...", "@graph": [...] }
 ```
 
-## RSC Uyumluluğu
+## RSC Compatible
 
-seo-mesh, React Context **kullanmaz**. JSX ağacını statik olarak gezer — React Server Components ile tam uyumludur.
+seo-mesh does **not** use React Context. It traverses the JSX tree statically — fully compatible with React Server Components.
 
-## Lisans
+## License
 
 MIT © Mehmet Can Öztürk
