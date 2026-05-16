@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { Article, Person, OpenGraph, Canonical } from '@seo-mesh/next';
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function BlogPage() {
         dateModified="2026-05-15"
         inLanguage="tr"
       >
-        <Person prop="author" name="Can Kaptaner" />
+        <Person prop="author" name="Mehmet Can Öztürk" />
       </Article>
 
       <div className="container">
@@ -31,7 +31,7 @@ export default function BlogPage() {
           <p className="meta">15 Mayıs 2026 · 5 dk okuma</p>
           <h1>Next.js App Router ile JSON-LD Nasıl Eklenir?</h1>
           <p className="meta" style={{ marginTop: '0.75rem' }}>
-            Yazan: Can Kaptaner
+            Yazan: Mehmet Can Öztürk
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export default function BlogPage() {
   "datePublished": "2026-05-15",
   "author": {
     "@type": "Person",
-    "name": "Can Kaptaner"
+    "name": "Mehmet Can Öztürk"
   }
 }`}</pre>
         </div>

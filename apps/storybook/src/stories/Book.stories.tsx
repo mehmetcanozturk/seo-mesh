@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+﻿import type { Meta, StoryObj } from '@storybook/react';
 import { Book, Person, Organization, AggregateRating, Offer } from '@seo-mesh/react';
 import { SchemaStory } from '../SchemaStory';
 
@@ -19,7 +19,7 @@ export const TemelKitap: StoryObj = {
   numberOfPages={420}
   bookFormat="https://schema.org/EBook"
 >
-  <Person prop="author" name="Can Kaptaner" />
+  <Person prop="author" name="Mehmet Can Öztürk" />
   <Organization prop="publisher" name="Dev Yayınları" />
   <AggregateRating prop="aggregateRating" ratingValue={4.7} reviewCount={84} />
   <Offer prop="workExample" price={149} priceCurrency="TRY" />
@@ -33,14 +33,14 @@ export const TemelKitap: StoryObj = {
         numberOfPages={420}
         bookFormat="https://schema.org/EBook"
       >
-        <Person prop="author" name="Can Kaptaner" />
+        <Person prop="author" name="Mehmet Can Öztürk" />
         <Organization prop="publisher" name="Dev Yayınları" />
         <AggregateRating prop="aggregateRating" ratingValue={4.7} reviewCount={84} />
         <Offer prop="workExample" price={149} priceCurrency="TRY" />
       </Book>
       <div className="product-card">
         <h2>React ile Modern Uygulama Geliştirme</h2>
-        <p>Can Kaptaner · Dev Yayınları · 420 sayfa</p>
+        <p>Mehmet Can Öztürk · Dev Yayınları · 420 sayfa</p>
         <div className="stars">★★★★★ <span style={{ color: '#888', fontSize: '0.85rem' }}>4.7 (84 değerlendirme)</span></div>
         <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.75rem' }}>
           <div className="badge">E-Kitap</div>

@@ -1,9 +1,9 @@
-{
+﻿{
   "name": "@seo-mesh/core",
   "version": "0.1.0",
   "description": "Framework-agnostic JSX tree traversal and JSON-LD builder for seo-mesh",
   "license": "MIT",
-  "author": "Can Kaptaner",
+  "author": "Mehmet Can Öztürk",
   "homepage": "https://github.com/mehmetcanozturk/seo-mesh#readme",
   "repository": {
     "type": "git",

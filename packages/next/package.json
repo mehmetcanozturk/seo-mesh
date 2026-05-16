@@ -1,9 +1,9 @@
-{
+﻿{
   "name": "@seo-mesh/next",
   "version": "0.1.0",
   "description": "Next.js App Router integration — sitemap, robots.txt, llms.txt, SEO audit and all seo-mesh components",
   "license": "MIT",
-  "author": "Can Kaptaner",
+  "author": "Mehmet Can Öztürk",
   "homepage": "https://github.com/mehmetcanozturk/seo-mesh#readme",
   "repository": {
     "type": "git",

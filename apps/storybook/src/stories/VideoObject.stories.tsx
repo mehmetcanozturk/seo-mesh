@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+﻿import type { Meta, StoryObj } from '@storybook/react';
 import { VideoObject, Person, Organization } from '@seo-mesh/react';
 import { SchemaStory } from '../SchemaStory';
 
@@ -21,7 +21,7 @@ export const Video: StoryObj = {
   thumbnailUrl="https://img.youtube.com/vi/abc123/maxresdefault.jpg"
   inLanguage="tr"
 >
-  <Person prop="author" name="Can Kaptaner" />
+  <Person prop="author" name="Mehmet Can Öztürk" />
   <Organization prop="publisher" name="seo-mesh" />
 </VideoObject>`}
     >
@@ -35,7 +35,7 @@ export const Video: StoryObj = {
         thumbnailUrl="https://img.youtube.com/vi/abc123/maxresdefault.jpg"
         inLanguage="tr"
       >
-        <Person prop="author" name="Can Kaptaner" />
+        <Person prop="author" name="Mehmet Can Öztürk" />
         <Organization prop="publisher" name="seo-mesh" />
       </VideoObject>
       <div className="product-card">
@@ -45,7 +45,7 @@ export const Video: StoryObj = {
         </div>
         <h2>Next.js App Router Tam Rehber</h2>
         <p>App Router, Server Components ve Streaming ile modern Next.js geliştirme.</p>
-        <p className="meta" style={{ marginTop: '0.5rem' }}>Can Kaptaner · seo-mesh · 10 May 2026</p>
+        <p className="meta" style={{ marginTop: '0.5rem' }}>Mehmet Can Öztürk · seo-mesh · 10 May 2026</p>
         <div className="badge blue" style={{ marginTop: '0.5rem' }}>VideoObject</div>
       </div>
     </SchemaStory>

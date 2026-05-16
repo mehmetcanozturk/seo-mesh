@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+﻿import type { Meta, StoryObj } from '@storybook/react';
 import { Article, BlogPosting, Person, Organization } from '@seo-mesh/react';
 import { SchemaStory } from '../SchemaStory';
 
@@ -17,7 +17,7 @@ export const TemelMakale: StoryObj = {
   dateModified="2026-05-15"
   inLanguage="tr"
 >
-  <Person prop="author" name="Can Kaptaner" />
+  <Person prop="author" name="Mehmet Can Öztürk" />
 </Article>`}
     >
       <Article
@@ -26,12 +26,12 @@ export const TemelMakale: StoryObj = {
         dateModified="2026-05-15"
         inLanguage="tr"
       >
-        <Person prop="author" name="Can Kaptaner" />
+        <Person prop="author" name="Mehmet Can Öztürk" />
       </Article>
       <div className="article-card">
         <p className="meta">15 Mayıs 2026 · 5 dk okuma</p>
         <h2>Next.js App Router ile JSON-LD</h2>
-        <p>Yazan: Can Kaptaner</p>
+        <p>Yazan: Mehmet Can Öztürk</p>
         <div className="badge blue">Article</div>
       </div>
     </SchemaStory>

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+﻿import type { Meta, StoryObj } from '@storybook/react';
 import { Article, Person, AiBotPolicy, Speakable } from '@seo-mesh/react';
 import { generateLlmsTxt } from '@seo-mesh/next';
 import { SchemaStory } from '../SchemaStory';
@@ -77,7 +77,7 @@ export const SpeakableDemo: StoryObj = {
   headline="Next.js ile JSON-LD"
   datePublished="2026-05-15"
 >
-  <Person prop="author" name="Can Kaptaner" />
+  <Person prop="author" name="Mehmet Can Öztürk" />
   <Speakable
     prop="speakable"
     cssSelector={[".article-intro", "h1"]}
@@ -90,7 +90,7 @@ export const SpeakableDemo: StoryObj = {
 //   }`}
     >
       <Article headline="Next.js ile JSON-LD" datePublished="2026-05-15">
-        <Person prop="author" name="Can Kaptaner" />
+        <Person prop="author" name="Mehmet Can Öztürk" />
         <Speakable prop="speakable" cssSelector={['.article-intro', 'h1']} />
       </Article>
       <div className="article-card">

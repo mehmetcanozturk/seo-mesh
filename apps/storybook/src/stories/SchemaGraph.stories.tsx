@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+﻿import type { Meta, StoryObj } from '@storybook/react';
 import { SchemaGraph, WebSite, Organization, Article, Person, BreadcrumbList, ListItem } from '@seo-mesh/react';
 import { SchemaStory } from '../SchemaStory';
 
@@ -58,7 +58,7 @@ export const SayfaGraph: StoryObj = {
     datePublished="2026-05-15"
     inLanguage="tr"
   >
-    <Person prop="author" name="Can Kaptaner" />
+    <Person prop="author" name="Mehmet Can Öztürk" />
   </Article>
 </SchemaGraph>`}
     >
@@ -68,13 +68,13 @@ export const SayfaGraph: StoryObj = {
           <ListItem prop="itemListElement" position={2} name="Blog" item="https://seo-mesh.dev/blog" />
         </BreadcrumbList>
         <Article headline="Next.js ile JSON-LD" datePublished="2026-05-15" inLanguage="tr">
-          <Person prop="author" name="Can Kaptaner" />
+          <Person prop="author" name="Mehmet Can Öztürk" />
         </Article>
       </SchemaGraph>
       <div className="article-card">
         <p className="meta">Ana Sayfa › Blog</p>
         <h2>Next.js ile JSON-LD</h2>
-        <p>Yazan: Can Kaptaner · 15 Mayıs 2026</p>
+        <p>Yazan: Mehmet Can Öztürk · 15 Mayıs 2026</p>
         <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.75rem' }}>
           <div className="badge blue">BreadcrumbList</div>
           <div className="badge">Article</div>

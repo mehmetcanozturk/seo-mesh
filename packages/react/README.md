@@ -1,4 +1,4 @@
-<p align="center">
+﻿<p align="center">
   <img src="https://raw.githubusercontent.com/mehmetcanozturk/seo-mesh/main/assets/seomesh-logo.svg" alt="seo-mesh" width="240" />
 </p>
 
@@ -111,4 +111,4 @@ React Context kullanılmaz. JSX ağacı statik olarak gezilir — `'use server'`
 
 ## Lisans
 
-MIT © Can Kaptaner
+MIT © Mehmet Can Öztürk

@@ -1,4 +1,4 @@
-<p align="center">
+﻿<p align="center">
   <img src="https://raw.githubusercontent.com/mehmetcanozturk/seo-mesh/main/assets/seomesh-logo.svg" alt="seo-mesh" width="280" />
 </p>
 
@@ -66,7 +66,7 @@ export default function Page() {
 import { Article, Person, FAQPage, Question, Answer } from '@seo-mesh/next';
 
 <Article headline="Başlık" datePublished="2026-05-15">
-  <Person prop="author" name="Can Kaptaner" />
+  <Person prop="author" name="Mehmet Can Öztürk" />
 </Article>
 
 <FAQPage>
@@ -165,4 +165,4 @@ seo-mesh, React Context **kullanmaz**. JSX ağacını statik olarak gezer — Re
 
 ## Lisans
 
-MIT © Can Kaptaner
+MIT © Mehmet Can Öztürk
