@@ -34,5 +34,5 @@ export function generateRobotsTxt({ rules, sitemap, host }: RobotsTxtOptions): s
 
   if (host) lines.push(`Host: ${host}`);
 
-  return lines.join('\n');
+  return lines.join('\n') + '\n';
 }

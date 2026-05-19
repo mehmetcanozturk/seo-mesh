@@ -48,7 +48,7 @@ export function auditPage(options: AuditPageOptions): AuditResult {
 
   // ── Description ──────────────────────────────────────────────────────────
   if (description) {
-    if (description.length < 50) {
+    if (description.length < 120) {
       issues.push({ rule: 'description-short', message: `Meta description too short (${description.length} chars, recommend 120–160)`, impact: 'warning' });
       deductions += 5;
     } else if (description.length > 160) {
